@@ -2,22 +2,15 @@ namespace Slutprojekt
 {
     public class User
     {
-        private uint _money;
+        // This class could probably be a singleton but I don't know how to make it one at the moment 
 
-        public uint Money
+        private static uint _money;
+
+        public static uint Money
         {
             get
             {
                 return _money;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    _money = 0;
-                    return;
-                }
-                _money = value;
             }
         }
 
@@ -26,11 +19,11 @@ namespace Slutprojekt
             _money = money;
         }
 
-        public void AddMoney(uint amount)
+        public static void AddMoney(uint amount)
         {
             _money += amount;
         }
-        public void RemoveMoney(uint amount)
+        public static void RemoveMoney(uint amount)
         {
             _money -= amount;
         }

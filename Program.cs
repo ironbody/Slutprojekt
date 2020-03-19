@@ -6,11 +6,9 @@ namespace Slutprojekt
     {
         static void Main(string[] args)
         {
-            var u = new User(142);
+            var r = new Roulette();
 
-            
-
-            System.Console.WriteLine(u.Money);
+            System.Console.WriteLine(r.Name);
         }
     }
 }
